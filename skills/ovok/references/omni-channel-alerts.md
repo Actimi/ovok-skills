@@ -10,7 +10,7 @@ Read the current [Omni-channel alerts](https://docs.ovok.com/signals/with-ovok/o
 
 ## Set it up
 
-1. The project needs a Signals tenant of its own; shared-tenant projects answer `409 SHARED_SIGNALS_TENANT`.
+1. The project needs a Signals tenant of its own; shared-tenant projects answer `409 SIGNALS_TENANT_NOT_OWN`.
 2. Switch on `OMNICHANNEL_ALERTS_ENABLED` (`PUT /v1/project/settings/OMNICHANNEL_ALERTS_ENABLED`).
 3. Save a rule with `PUT /v1/omnichannel-alerts/rules`. Without one, nobody is told.
 4. Record recipients in FHIR: `Patient.generalPractitioner` or record shares (`practitioner`), active `CareTeam` members (`caregiver`), `RelatedPerson` (`relatedPerson`), accepted shares with carers and patients (`sharedWith`).
