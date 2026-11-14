@@ -9,7 +9,7 @@ Read the current docs page's prerequisites, limitations, and error behavior, the
 - **Writes and retries:** determine whether writes are atomic, partial, asynchronous, destructive, or idempotent; establish safe retry and completion/status-check behavior before implementing.
 - **Side effects:** identify emails, invitations, notifications, queued work, webhooks, FHIR writes, and third-party calls. Know what can and cannot be rolled back.
 - **Existing state:** check effects on issued tokens, memberships, scheduled jobs, existing resources, links, and already-running workflows when configuration changes.
-- **Alert delivery:** never send alert messages from app code by polling, and never evaluate routing or escalation in app code. Use Omni-channel alerts or the `alert.notify` webhook. A routing rule naming an unknown channel or recipient is refused (`422 UNKNOWN_NOTIFY_LABELS`); a person without an email address or a registered device is skipped on that channel.
+- **Alert delivery:** never send alert messages from app code by polling, and never evaluate the rule's conditions in app code. Use Omni-channel alerts, or Signals' alert webhooks for delivery of your own. A rule naming an unknown channel or recipient is refused (`422 UNKNOWN_NOTIFY_LABELS`); a person without an email address or a registered device is skipped on that channel.
 - **Limits and versions:** verify pagination, payload limits, environment differences, FHIR version, backend capability, and installed SDK declarations.
 
 **Wrong:** assume `/fhir/R4/Observation/$lastn` is a standard FHIR route. It is Ovok-specific; verify it in the current operation docs and the target server's `/fhir/R4/metadata` CapabilityStatement.
