@@ -24,3 +24,7 @@ Do not assume a setting is an authorization policy. Settings gate flows; AccessP
 ## Project inheritance
 
 The settings response shows values stored on the current project, not necessarily the resolved runtime value. Boolean settings do not generally inherit. Patient/practitioner app URL text values can fall back to a parent project for generated links; a `null` in the child project's response does not alone prove that no URL resolves. Default AccessPolicies are project-local and are not retroactive to existing memberships. Verify the exact key's inheritance and scope before changing it.
+
+## Omni-channel alerts
+
+`OMNICHANNEL_ALERTS_ENABLED` turns on alert delivery by push and email. It works only for projects with their own Signals tenant, and it needs a routing rule (`PUT /v1/omnichannel-alerts/rules`) before anyone is told. See [references/omni-channel-alerts.md](omni-channel-alerts.md).

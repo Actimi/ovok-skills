@@ -6,7 +6,7 @@ description: >
   Use for developer-time work on Ovok, not Ovok's runtime `$ai` feature.
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Ovok App Builder
@@ -25,6 +25,7 @@ Build patient-facing, practitioner-facing, and operational applications on Ovok.
 - Workflow prerequisites, failures, writes, and side effects: [references/gotchas-checklist.md](references/gotchas-checklist.md).
 - Ontoly graph use for codebase structure: [references/ontoly.md](references/ontoly.md).
 - Signals, MDR, and medical-device claims: [references/regulatory.md](references/regulatory.md).
+- Alert delivery by push and email, routing and escalation rules: [references/omni-channel-alerts.md](references/omni-channel-alerts.md).
 - Stable route scaffolding: [references/common-paths.md](references/common-paths.md); verify current contract before implementation.
 - Worked practitioner blood-pressure flow: [references/example-walkthrough.md](references/example-walkthrough.md).
 
