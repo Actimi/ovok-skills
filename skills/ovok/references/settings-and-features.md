@@ -27,4 +27,4 @@ The settings response shows values stored on the current project, not necessaril
 
 ## Omni-channel alerts
 
-`OMNICHANNEL_ALERTS_ENABLED` turns on alert delivery by push and email. It works only for projects with their own Signals tenant, and it needs a routing rule (`PUT /v1/omnichannel-alerts/rules`) before anyone is told. See [references/omni-channel-alerts.md](omni-channel-alerts.md).
+`OMNICHANNEL_ALERTS_ENABLED` (off by default) has Ovok run the project's rule on each Signals alert event and tell the people it names by push and email. It works only for projects with their own Signals tenant, and it needs a rule (`PUT /v1/omnichannel-alerts/rules`) before anyone is told. See [references/omni-channel-alerts.md](omni-channel-alerts.md).
